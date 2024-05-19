@@ -14,7 +14,9 @@
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 600px;
+    width: 90%;
+    max-width: 600px;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -35,7 +37,7 @@ input[type="email"] {
     border-radius: 4px;
     margin-bottom: 1rem;
     width: 100%; /* Make the input field take the full width of the form */
-    max-width: 250px; /* Optional: Set a max width for the input field */
+    box-sizing: border-box;
 }
 
 button {
@@ -47,10 +49,21 @@ button {
     border-radius: 4px;
     cursor: pointer;
     width: 100%; /* Make the button take the full width of the form */
-    max-width: 150px; /* Optional: Set a max width for the button */
+    box-sizing: border-box;
 }
 
     button:hover {
         background-color: #003b8b;
     }
-+
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    input[type="email"], button {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+}
